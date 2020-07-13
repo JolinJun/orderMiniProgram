@@ -1,13 +1,29 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- index.wxml -->
+<!-- <view class="container">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+</view> -->
+
+<view class="profile-mian">
+    <view class="profile-box">
+        <view class="flex-align-center">
+            <view class="userinfo-avatar">
+                <image class="img" src="{{userInfo.avatarUrl}}"></image>
+            </view>
+            <view class="info-box">
+                <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+                <view class="btn flex-all-center">点击登陆</view>
+            </view>
+        </view>
+    </view>
 </view>
