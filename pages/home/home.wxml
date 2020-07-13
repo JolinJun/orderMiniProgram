@@ -7,11 +7,11 @@
             <image class="img" src="./../../assets/images/img_order.png"></image>
         </view>
         <view class="right flex-column flex-1">
-            <view class="box">
+            <view class="box" bindtap="clickBox">
                 <image class="img" src="./../../assets/images/img_benefit.png"></image>
                 <text class="text">超值优惠</text>
             </view>
-            <view class="box" style="margin-bottom:0">
+            <view class="box" style="margin-bottom:0" bindtap="clickBox">
                 <image class="img" src="./../../assets/images/img_sprise.png"></image>
                 <text class="text">更多惊喜</text>
             </view>
