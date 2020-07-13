@@ -1,0 +1,67 @@
+.home-main{
+    background-color: #F5F5F5;
+    padding: 20rpx;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+.home-main .swiper{
+    width: 100%;
+    height: 320rpx;
+    margin-bottom: 30rpx;
+    border-radius: 12rpx;
+    overflow: hidden;
+}
+.home-main .left{
+    height: 364rpx;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
+    border-radius: 12rpx;
+    margin-right: 20rpx;
+}
+.home-main .block .img{
+    width: 100%;
+    height: 100%;
+}
+.home-main .box{
+    width: 100%;
+    height: 172rpx;
+    margin-bottom: 20rpx;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.16);
+    border-radius:12px;
+    position: relative;
+}
+.home-main .box .text{
+    color: #333;
+    font-size: 32rpx;
+    font-weight: bold;
+    position: absolute;
+    left: 20rpx;
+    top: 24rpx;
+}
+.info-box{
+    padding: 24rpx 0;
+    background: white;
+    border-radius: 12rpx;
+    margin-top: 30rpx;
+}
+.info-box .item{
+    margin-bottom: 24rpx;
+}
+.info-box .icon-img{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 8rpx;
+}
+.info-box .title{
+    margin-bottom: 4rpx;
+    font-weight: bold; 
+    font-size: 28rpx;
+    color: #333;
+    padding-left: 12rpx;
+}
+.info-box .tip{
+    color: #666;
+    font-size: 24rpx;
+    padding: 0 20rpx;
+    line-height: 34rpx;
+}

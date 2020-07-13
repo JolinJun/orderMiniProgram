@@ -1,0 +1,88 @@
+/**
+ * 此处为全局样式
+ */
+
+/**
+ * 此处为全局样式
+ */
+ page {
+    height: 100%;
+    width:100%;
+    display:block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.25);
+    font-family: PingFangSC-Regular,Microsoft Yahei,-apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    font-size:28rpx;
+    color: #4A4A4A;
+    font-weight:light;
+    word-break:break-all;
+}
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clear {
+    zoom: 1;
+}
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.border-box{
+    box-sizing: border-box
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-1{
+    display: flex;
+    flex: 1;
+}
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+.flex-justify-center {
+    display: flex;
+    justify-content: center
+}
+.flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-space-around{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-all-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-between-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.absolute-vertical-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,10 @@
+.swiper-wrap{
+    height: 100%;
+}
+.swiper-item-box{
+    height: 100%;
+}
+.swiper-item{
+    width: 100%;
+    height: 100%;
+}

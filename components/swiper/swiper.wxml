@@ -1,0 +1,9 @@
+<view class="swiper-main" style="height: {{height}}rpx">
+    <swiper class="swiper-wrap" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" indicator-active-color="#DE3E26" indicator-color="rgba(0,0,0,.5)">
+        <block wx:for="{{swiperList}}" wx:key="*this">
+            <swiper-item class="swiper-item-box">
+                <image class="swiper-item" src="{{item.src}}" style="background: {{item.background}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

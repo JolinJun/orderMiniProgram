@@ -1,0 +1,59 @@
+<view class="home-main">
+    <view class="swiper">
+        <swiper-component height="{{320}}"></swiper-component>
+    </view>
+    <view class="block flex-space-around">
+        <view class="left flex-1" bindtap="goMenu">
+            <image class="img" src="./../../assets/images/img_order.png"></image>
+        </view>
+        <view class="right flex-column flex-1">
+            <view class="box">
+                <image class="img" src="./../../assets/images/img_benefit.png"></image>
+                <text class="text">超值优惠</text>
+            </view>
+            <view class="box" style="margin-bottom:0">
+                <image class="img" src="./../../assets/images/img_sprise.png"></image>
+                <text class="text">更多惊喜</text>
+            </view>
+        </view>
+    </view>
+    <view class="info-box">
+        <view class="item">
+            <view class="title flex-align-center">
+                <image src="./../../assets/icons/icon_intro.png" class="icon-img"/>
+                <text class="text">门店简介</text>
+            </view>
+            <view class="tip">
+                欢迎光临：《妈妈的味道》食品店，为了能及时时用餐，希望大家提前30分钟以上预定下单。（声明：本店采用新鲜水果，进口原料，拒绝浓缩，制作良心产品）谢谢！
+            </view>
+        </view>
+        <view class="item">
+            <view class="title flex-align-center">
+                <image src="./../../assets/icons/icon_time.png" class="icon-img"/>
+                <text class="text">营业时间</text>
+            </view>
+            <view class="tip">
+                上午8:00-晚上11:00
+            </view>
+        </view>
+        <view class="item">
+            <view class="title flex-align-center">
+                <image src="./../../assets/icons/icon_location.png" class="icon-img"/>
+                <text class="text">门店坐标</text>
+            </view>
+            <view class="tip">
+                深圳市龙岗区鹏程万李路68号
+            </view>
+        </view>
+        <view class="item">
+            <view class="title flex-align-center">
+                <image src="./../../assets/icons/icon_phone.png" class="icon-img"/>
+                <text class="text">联系热线</text>
+            </view>
+            <view class="tip">
+                135-5656-9898
+            </view>
+        </view>
+      
+    </view>
+</view>
