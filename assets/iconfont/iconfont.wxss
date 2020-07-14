@@ -266,9 +266,7 @@
 .iconzhuangudingke:before {
     content: "\e613";
 }
-.iconpeilianbaogao:before {
-    content: "\e614";
-}
+
 .icondengdaipingjia:before {
     content: "\e615";
 }

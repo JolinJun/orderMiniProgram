@@ -10,14 +10,14 @@
 
 const ENV_CONFIG = {
     LOCAL: {
-        apiRoot: 'https://mini-api-qa.peilian.com/guarder', // 测试环境接口
+        apiRoot: '', // 测试环境接口
         share: {
             // 分享配置
         },
     },
     // 线上环境
     PROD: {
-        apiRoot: 'https://mini-api.peilian.com/guarder', // 接口域名
+        apiRoot: '', // 接口域名
         share: {
             // 分享配置
         },
