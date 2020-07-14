@@ -1,2 +1,2 @@
 # orderMiniProgram
-这是一个点单的小程序
+这是一个测试的小程序
