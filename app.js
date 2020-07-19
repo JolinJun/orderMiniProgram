@@ -5,7 +5,6 @@ App({
         wx.getSystemInfo({
             success: res => {
                 this.globalData.rpx = 750 / res.screenWidth
-                this.globalData.windowHeight = res.windowHeight
             }
         })
 
@@ -40,6 +39,5 @@ App({
     globalData: {
         userInfo: null,
         rpx: 2,
-        windowHeight: 603 // 屏幕可视范围的高度(px)
     }
 })
