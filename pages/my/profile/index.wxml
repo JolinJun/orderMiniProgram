@@ -25,5 +25,45 @@
                 <view class="btn flex-all-center">点击登陆</view>
             </view>
         </view>
+        <view class="activity-box flex-align-center">
+            <image class="image" src="" mode="aspectFit" lazy-load="true" binderror="" bindload=""></image>
+            <view class="number flex-align-center">
+                <text class="big-text">0</text>
+                <text class="small-text">元</text>
+            </view>
+            <view class="tip">妈妈的味道今日全场优惠9.5折</view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="block flex-align-center">
+            <image class="image" src="/assets/images/img_wallet.png"></image>
+            <view class="text">我的钱包</view>
+        </view>
+        <view class="block-group">
+            <view class="block flex-align-center">
+                <image class="image" src="/assets/images/img_card.png"></image>
+                <view class="wrap flex-align-center">
+                    <view class="text">我的卡券</view>
+                </view>
+            </view>
+            <view class="block flex-align-center">
+                <image class="image" src="/assets/images/img_comment.png"></image>
+                <view class="wrap flex-align-center">
+                    <view class="text">意见反馈</view>
+                </view>
+            </view>
+            <view class="block flex-align-center">
+                <image class="image" src="/assets/images/img_help.png"></image>
+                <view class="wrap flex-align-center">
+                    <view class="text">帮助中心</view>
+                </view>
+            </view>
+            <view class="block flex-align-center">
+                <image class="image" src="/assets/images/img_know.png"></image>
+                <view class="wrap flex-align-center" style="border-bottom: none">
+                    <view class="text">平台须知</view>
+                </view>
+            </view>
+        </view>
     </view>
 </view>
