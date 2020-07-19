@@ -1,4 +1,6 @@
 {
     "navigationBarTitleText": "菜谱",
-    "usingComponents": {}
-  }
+    "usingComponents": {
+        "swiper-component": "/components/swiper/swiper"
+    }
+}

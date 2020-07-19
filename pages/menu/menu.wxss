@@ -1,92 +1,74 @@
-page {
-    font-family: "微软雅黑";
-    background-color: #f0f0f0;
+.swiper {
+    padding: 0 30rpx;
+    margin-top: 10px;
 }
 
-.search {
+.wrap {
     width: 100%;
-    height: 88rpx;
-    background-color: #5196ff;
-    box-sizing: border-box;
-    padding-top: 18rpx;
     position: fixed;
     left: 0;
-    top: 0;
-}
-
-.search-box {
-    width: 690rpx;
-    height: 57rpx;
-    margin-left: 30rpx;
-    background-color: #fff;
-    box-sizing: border-box;
-    padding-left: 60rpx;
-    border-radius: 57rpx;
-    font-size: 26rpx;
-}
-
-.question-mark {
-    width: 30rpx;
-    height: 30rpx;
-    position: absolute;
-    left: 45rpx;
-    top: 30rpx;
-}
-
-.tui-fixed-x {
-    /* margin-left: 130px; */
-    position: fixed;
-    top: 89rpx;
-    left: 0;
+    top: 120px;
 }
 
 .tui-fixed-left {
-    width: 180rpx;
+    flex-shrink: 0;
+    width: 166rpx;
     height: 100%;
-    border-right: 1px solid #dfdfdf;
-    position: fixed;
     background-color: #f5f5f5;
-    top: 89rpx;
-    left: 0;
+    /* position: fixed; */
+    /* top: 120px; */
+    /* left: 0; */
 }
 
 .tui-list-head {
     height: 65rpx;
     line-height: 65rpx;
+    padding-left: 20rpx;
 }
 
-.tui-city-scroll {
+.menu-scroll {
+    background-color: #f5f5f5;
     width: 100%;
 }
 
 .menu-item {
-    font-size: 26rpx;
+    font-size: 23rpx;
     box-sizing: border-box;
     height: 100rpx;
-    /* line-height: 100rpx; */
-    width: 180rpx;
-    background-color: #fff;
+    line-height: 100rpx;
+    width: 166rpx;
     display: block;
-    border-bottom: 1px solid #dfdfdf;
     position: relative;
     z-index: 10;
     text-align: center;
 }
 
+.menu-item .num {
+    color: white;
+    width: 24rpx;
+    height: 24rpx;
+    line-height: 26rpx;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #EB524B;
+    font-size: 16rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 20rpx;
+}
+
 .menu-active {
-    border-left: 10rpx solid #5196ff;
-    background-color: #f0f0f0;
+    background-color: white;
+    color: #EB524B;
 }
 
 .content {
-    width: 570rpx;
+    flex: 1;
     box-sizing: border-box;
-    padding-left: 20rpx;
-    padding-right: 20rpx;
     height: 100%;
-    position: fixed;
-    top: 89rpx;
-    right: 0;
+    /* position: fixed; */
+    /* top: 120px; */
+    /* right: 0; */
 }
 
 .tui-city-scroll-y {
@@ -95,54 +77,270 @@ page {
 }
 
 .tui-list-head {
-    height: 65rpx;
-    line-height: 65rpx;
+    height: 100rpx;
+    line-height: 100rpx;
     font-size: 28rpx;
-    font-weight: 700;
+    font-weight: bold;
+    color: #333;
 }
 
 .tui-list-li {
     background-color: #fff;
-    /* height: 400px; */
     overflow: hidden;
-    color: #fff;
-    font-size: 50rpx;
-    box-sizing: border-box;
-    padding: 20rpx 0 0 0;
 }
 
 .goods-box {
-    width: 170rpx;
-    /* height: 100rpx;
-    background: #c00; */
-    overflow: hidden;
-    margin-right: 10rpx;
-    /* margin-bottom: 10rpx; */
-    float: left;
+    width: 100%;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+
+.good-box-wrap {
+    width: 100%;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid #F5F5F5;
 }
 
 .tui-list-li .goods-box:nth-child(3n) {
     margin-right: 0rpx;
 }
 
-.goodsImg {
+.goods-img {
     display: block;
-    width: 100rpx;
-    height: 100rpx;
-    margin: 0 auto;
-    margin-bottom: 15rpx;
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+    border-radius: 10rpx;
+    flex-shrink: 0;
 }
 
-.goodsName {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    height: 42rpx;
-    line-height: 42rpx;
-    text-align: center;
-    font-size: 24rpx;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.goods-name {
     color: #333;
+    font-weight: bold;
+    font-size: 28rpx;
+    width: 65%;
+    margin-bottom: 10rpx;
+}
+
+.info-box {
+    flex: 1;
+    position: relative;
+}
+
+.info-box .tip {
+    height: 32rpx;
+    line-height: 32rpx;
+    background: rgba(255, 171, 81, .15);
+    color: #FFAB51;
+    font-size: 20rpx;
+    margin-bottom: 10rpx;
+    display: inline-block;
+    padding: 0 10rpx;
+}
+
+.info-box .good-text {
+    color: #999;
+    font-size: 20rpx;
+}
+
+.info-box .fun-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 30rpx;
+}
+
+.info-box .fun-box .left {
+    color: #EB524B;
+    font-weight: bold;
+}
+
+.info-box .fun-box .left .samll-text {
+    font-size: 20rpx;
+}
+
+.info-box .fun-box .left .big-text {
+    font-size: 32rpx;
+}
+
+.info-box .fun-box .btn {
+    width: 104rpx;
+    height: 42rpx;
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    border-radius: 12rpx;
+    color: white;
+    font-size: 24rpx;
+}
+
+.footer {
+    height: 50px;
+    width: 100%;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+}
+
+.footer .text {
+    color: 32rpx;
+    font-weight: bold;
+    color: #333;
+    margin-right: 8rpx;
+}
+
+.footer .price {
+    color: #EB524B;
+    font-weight: bold;
+    font-size: 32rpx;
+}
+
+.footer .btn {
+    width: 240rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    opacity: 1;
+    color: white;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-left: 18rpx;
+}
+
+.footer .btn.disactivy {
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    opacity: 0.4;
+}
+
+
+/* 规格弹框 */
+
+.pop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.52);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.pop-main {
+    width: 586rpx;
+    max-height: 800rpx;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12rpx;
+}
+
+.pop-header {
+    padding: 24rpx 0 20rpx 30rpx;
+    color: #333;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.pop-content {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.pop-content .item .text {
+    padding-left: 30rpx;
+    margin-bottom: 10rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.pop-content .size-list {
+    flex-wrap: wrap;
+    padding: 0 20rpx;
+    box-sizing: border-box;
     margin-bottom: 20rpx;
+}
+
+.pop-content .size-item {
+    width: 33.33%;
+    color: #333333;
+    color: 24rpx;
+    margin-bottom: 10rpx;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+
+.pop-content .size-item-wrap {
+    border: 1rpx solid #F5F5F5;
+    height: 56rpx;
+    width: 100%;
+    border-radius: 12rpx;
+}
+
+.pop-content .size-item-wrap.active {
+    border-color: #FFAB51;
+    background: rgba(255, 171, 81, 0.15);
+    color: #FFAB51;
+}
+
+.pop-footer .selected-box {
+    background: #F5F5F5;
+    height: 58rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+    color: #999;
+    font-size: 24rpx;
+}
+
+.pop-footer .selected-box .text {
+    color: #333;
+    margin-left: 10rpx;
+}
+
+.pop-footer .fun-box {
+    padding: 0 30rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+
+.pop-footer .fun-box .left .num {
+    color: #EB524B;
+    font-weight: bold;
+    font-size: 24rpx;
+    margin-left: 4rpx;
+}
+
+.pop-footer .fun-box .left .num .light {
+    font-size: 36rpx;
+}
+
+.pop-footer .fun-box .left .text {
+    color: #333;
+    font-weight: bold;
+    font-size: 28rpx;
+}
+
+.pop-footer .right .btn {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.pop-footer .right .num {
+    color: #333;
+    font-size: 28rpx;
+    margin: 0 16rpx
+}
+
+.pop .img-close {
+    width: 72rpx;
+    height: 72rpx;
+    position: absolute;
+    left: 50%;
+    bottom: -106rpx;
+    transform: translateX(-50%);
 }

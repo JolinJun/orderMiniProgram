@@ -84,9 +84,10 @@
     margin-top: 66rpx;
 }
 
-.content .block {
+.block {
+    position: relative;
     background: white;
-    padding: 0 20rpx;
+    padding-left: 20rpx;
     box-sizing: border-box;
     height: 100rpx;
 }
@@ -111,4 +112,13 @@
 
 .block-group {
     margin-top: 20rpx;
+}
+
+.block .iconicn-arrow-whitex {
+    position: absolute;
+    right: 20rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22rpx;
+    color: #CCCCCC;
 }

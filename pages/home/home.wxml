@@ -1,6 +1,6 @@
 <view class="home-main">
     <view class="swiper">
-        <swiper-component height="{{320}}"></swiper-component>
+        <swiper-component height="{{160}}"></swiper-component>
     </view>
     <view class="block flex-space-around">
         <view class="left flex-1" bindtap="goMenu">

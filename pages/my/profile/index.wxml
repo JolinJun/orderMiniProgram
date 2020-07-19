@@ -37,7 +37,10 @@
     <view class="content">
         <view class="block flex-align-center">
             <image class="image" src="/assets/images/img_wallet.png"></image>
-            <view class="text">我的钱包</view>
+            <view class="wrap flex-align-center" style="border-bottom: none">
+                    <view class="text">我的钱包</view>
+                </view>
+            <view class="iconfont iconicn-arrow-whitex"></view>
         </view>
         <view class="block-group">
             <view class="block flex-align-center">
@@ -45,24 +48,28 @@
                 <view class="wrap flex-align-center">
                     <view class="text">我的卡券</view>
                 </view>
+                <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
             <view class="block flex-align-center">
                 <image class="image" src="/assets/images/img_comment.png"></image>
                 <view class="wrap flex-align-center">
                     <view class="text">意见反馈</view>
                 </view>
+                <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
             <view class="block flex-align-center">
                 <image class="image" src="/assets/images/img_help.png"></image>
                 <view class="wrap flex-align-center">
                     <view class="text">帮助中心</view>
                 </view>
+                <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
             <view class="block flex-align-center">
                 <image class="image" src="/assets/images/img_know.png"></image>
                 <view class="wrap flex-align-center" style="border-bottom: none">
                     <view class="text">平台须知</view>
                 </view>
+                <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
         </view>
     </view>
