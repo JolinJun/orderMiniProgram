@@ -57,14 +57,14 @@
                 </view>
                 <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
-            <view class="block flex-align-center">
+            <view class="block flex-align-center" bindtap="goHelp">
                 <image class="image" src="/assets/images/img_help.png"></image>
                 <view class="wrap flex-align-center">
                     <view class="text">帮助中心</view>
                 </view>
                 <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
-            <view class="block flex-align-center">
+            <view class="block flex-align-center" bindtap="goNotice">
                 <image class="image" src="/assets/images/img_know.png"></image>
                 <view class="wrap flex-align-center" style="border-bottom: none">
                     <view class="text">平台须知</view>

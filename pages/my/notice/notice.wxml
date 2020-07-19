@@ -1,0 +1,43 @@
+<view class="main">
+    <view class="content">
+        <view class="item">
+            <view class="text">
+                手机自助点单平台是 “妈妈的味道” 在微信公众平台上运营的线上自助点单台，您(“用户”)只需在手机上简单操作即可实现免排队点单或预约点单。
+            </view>
+            <view class="text">您在使用此平台前仔细阅读如下须知：</view>
+        </view>
+        <view class="item">
+            <view class="title">1.点单及取单</view>
+            <view class="text flex-aligh-center padding-left">
+                <text class="em"></text>
+                您需要通过微信平台付款点单。
+            </view>
+            <view class="text flex-aligh-center padding-left">
+                <text class="em"></text>
+                点单时，您可选择立即取单或预约取单。立即取单，点单时您无需现场排队；预约取单,您可指定取单时间，届时到店即领饮品；部分门店支持配送服务，您可以在支持的配送范内选择收货地址，等待在预计送达时间内送达;
+            </view>
+            <view class="text flex-aligh-center padding-left">
+                <text class="em"></text>
+                以到店取单方式下单的情况，取单号可在微信→小程序→“妈妈的味道手机点单”→订单→我的订单中查阅
+            </view>
+            <view class="text flex-aligh-center padding-left">
+                <text class="em"></text>
+                以到店取单方式下单的情况，您于门店营业时间内完成取单。
+            </view>
+        </view>
+        <view class="item">
+            <view class="title">发票</view>
+            <view class="text flex-aligh-center padding-left">
+                <text class="em"></text>
+                您可于现场凭单据换领发票。
+            </view>
+        </view>
+        <view class="item">
+            <view class="title">3.取消与退款</view>
+            <view class="text padding-left" style="margin-bottom: 0">
+                <text class="em"></text>
+                以到店取单方式下单的情况,预约点单距取单时间15分钟前,您可在手机端“取消订单”。以送单上门的情况,预约送达时间前30分钟可以取消订单;订单成功取消后,相应款项将在0-3个工作日返还;通期不可取消及退款
+            </view>
+        </view>
+    </view>
+</view>
