@@ -12,7 +12,7 @@ import envConf from './env.conf';
 const env = envConf[projectConf.ENV];
 // 请求域名
 const apiRoot = env.apiRoot;
-const version = '2.7.0'
+const version = '1.0'
 export {
     apiRoot,
     version,
