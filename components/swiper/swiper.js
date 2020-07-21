@@ -6,8 +6,7 @@ Component({
         width: {
             type: Number,
             value: 0,
-            observer(newVal, oldVal) {
-            }
+            observer(newVal, oldVal) {}
         },
         height: {
             type: Number,
@@ -16,24 +15,25 @@ Component({
         swiperList: {
             type: Array,
             value: [{
-                src: '',
-                background: 'pink'
-            },
-            {
-                src: '.',
-                background: 'blue'
-            },{
-                src: '',
-                background: 'yellow'
-            }]
+                    src: '',
+                    background: 'pink'
+                },
+                {
+                    src: '',
+                    background: 'blue'
+                }, {
+                    src: '',
+                    background: 'yellow'
+                }
+            ]
         }
     },
     pageLifetimes: {
         // 使用音频组件的页面显示在前台的事件
-        
+
     },
     methods: {
-        
-       
+
+
     }
 })

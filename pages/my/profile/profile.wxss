@@ -1,0 +1,124 @@
+/**index.wxss**/
+
+.profile-mian {
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.profile-box {
+    padding: 70rpx 0;
+    background: linear-gradient(270deg, rgba(235, 81, 74, 1) 0%, rgba(235, 89, 59, 1) 100%);
+    position: relative;
+}
+
+.userinfo-avatar {
+    width: 122rpx;
+    height: 122rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 40rpx;
+    margin-right: 28rpx;
+}
+
+.userinfo-avatar .img {
+    width: 100%;
+    height: 100%;
+}
+
+.userinfo-nickname {
+    color: #F6C9C4;
+    margin-bottom: 16rpx;
+}
+
+.info-box .btn {
+    width: 136rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    font-size: 24rpx;
+    color: #EB524B;
+    background: white;
+}
+
+.activity-box .image {
+    width: 64rpx;
+    height: 64rpx;
+    margin-right: 8rpx;
+    background: pink;
+}
+
+.activity-box {
+    width: 710rpx;
+    font-weight: bold;
+    color: #EB524B;
+    margin-right: 40rpx;
+    height: 92rpx;
+    background: white;
+    border-radius: 12rpx;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+    position: absolute;
+    left: 20rpx;
+    bottom: -46rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.activity-box .number {
+    margin-right: 40rpx;
+}
+
+.activity-box .big-text {
+    font-size: 44rpx;
+}
+
+.activity-box .small-text {
+    font-size: 24rpx;
+}
+
+.activity-box .tip {
+    font-size: 24rpx;
+    color: #FFAB51;
+}
+
+.content {
+    margin-top: 66rpx;
+}
+
+.block {
+    position: relative;
+    background: white;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    height: 100rpx;
+}
+
+.block .image {
+    width: 64rpx;
+    height: 64rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.block .wrap {
+    height: 100%;
+    flex: 1;
+    border-bottom: 1rpx solid #E3E3E3;
+}
+
+.block .text {
+    color: #333333;
+    font-size: 32rpx;
+}
+
+.block-group {
+    margin-top: 20rpx;
+}
+
+.block .iconicn-arrow-whitex {
+    position: absolute;
+    right: 20rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22rpx;
+    color: #CCCCCC;
+}

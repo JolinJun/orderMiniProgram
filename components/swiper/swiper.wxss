@@ -1,10 +1,17 @@
-.swiper-wrap{
+.swiper-main {
+    border-radius: 12rpx;
+    overflow: hidden;
+}
+
+.swiper-wrap {
     height: 100%;
 }
-.swiper-item-box{
+
+.swiper-item-box {
     height: 100%;
 }
-.swiper-item{
+
+.swiper-item {
     width: 100%;
     height: 100%;
 }

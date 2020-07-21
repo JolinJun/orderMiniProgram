@@ -1,4 +1,4 @@
-<view class="swiper-main" style="height: {{height}}rpx">
+<view class="swiper-main" style="height: {{height}}px">
     <swiper class="swiper-wrap" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" indicator-active-color="#DE3E26" indicator-color="rgba(0,0,0,.5)">
         <block wx:for="{{swiperList}}" wx:key="*this">
             <swiper-item class="swiper-item-box">

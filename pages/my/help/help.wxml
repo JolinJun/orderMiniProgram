@@ -1,0 +1,29 @@
+<view class="main">
+    <view class="content">
+        <view class="header text">常见问题</view>
+        <view class="item">
+            <view class="title">Q1：平台适用场景是什么？</view>
+            <view class="text">场景一:自助点单,您可以免除现场排队困扰。</view>
+            <view class="text">场最二:预约点单,您可以在您方便的时间到店领取饮品。</view>
+            <view class="text">场最三:部分门店支持限定区域的配送,您可以在支持的配送范围内选择收货地址,等待在预计送达时间内送达;</view>
+        </view>
+        <view class="item">
+            <view class="title">Q2：如何进入平台？</view>
+            <view class="text">场景一:自助点单,您可以免除现场排队困扰</view>
+            <view class="text">场最二:预约点单,您可以在您方便的时间到店领取饮品</view>
+        </view>
+        <view class="item">
+            <view class="title">Q3：以到店取单方式下单的情况,取单号如何查询?</view>
+            <view class="text">方式一:“妈妈的味道手机点单平台→订单→我的订单</view>
+            <view class="text">方式二:查阅微信服务通知</view>
+        </view>
+        <view class="item">
+            <view class="title">Q4：可以委托他人代领饮品吗?</view>
+            <view class="text">A:可以。受托人可凭取单号至相应门店领取,您需妥善保管您的取单号,以免被他人冒领</view>
+        </view>
+        <view class="item">
+            <view class="title">Q3：可以隔日点单吗?</view>
+            <view class="text" style="margin-bottom: 0">A:当日门店营业结束后,您可以预约第二天的订单</view>
+        </view>
+    </view>
+</view>
