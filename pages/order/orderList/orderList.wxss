@@ -75,6 +75,15 @@
     font-size: 28rpx;
 }
 
+.order-item .btn {
+    width: 176rpx;
+    height: 60rpx;
+    border-radius: 60rpx;
+    border: 1rpx solid #EB524B;
+    color: #EB524B;
+    font-size: 28rpx;
+}
+
 .good-list {
     width: 510rpx;
     flex-wrap: wrap;

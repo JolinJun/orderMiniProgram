@@ -1,5 +1,5 @@
 <!-- 头部轮播 -->
-<view class="main">
+<view class="main full flex-column">
     <view class="swiper">
         <swiper-component height="{{100}}"></swiper-component>
     </view>
@@ -16,7 +16,7 @@
         <!-- 右侧滚动商品 -->
         <view class='content'>
             <scroll-view class='tui-city-scroll-y' scroll-y="true" style='height:{{height}}' scroll-with-animation="true" scroll-top="{{rightProTop}}" bindscroll="scroll">
-                <view class='pro-item' wx:for="{{navList}}" wx:key="unique">
+                <view class='pro-item {{index === navList.length -1 ? "last" : ""}}' wx:for="{{navList}}" wx:key="unique">
                     <view class='tui-list-head' id='NAV{{index}}'>{{item.c_name}}</view>
                     <view class='tui-list-li'>
                         <view class='goods-box' wx:for-item='items' wx:for="{{item.list}}" wx:key="unique">
@@ -31,7 +31,7 @@
                                             <text class="text-samll">¥</text>
                                             <text class="text-big">25.9</text>
                                         </view>
-                                        <view class="btn flex-all-center" bindtap="selectSize">
+                                        <view class="btn flex-all-center" bindtap="openPop">
                                             选规格
                                         </view>
                                     </view>
@@ -153,9 +153,9 @@
                         </view>
                     </view>
                     <view class="right flex-align-center">
-                        <image class="btn reduce flex-all-center" src="/assets/icons/icon_reduce.png"></image>
-                        <view class="num">0</view>
-                        <image class="btn add flex-all-center" src="/assets/icons/icon_add.png"></image>
+                        <image class="btn reduce flex-all-center" src="/assets/icons/icon_reduce.png" bindtap="reduceCount"></image>
+                        <view class="num">{{popCount}}</view>
+                        <image class="btn add flex-all-center" src="/assets/icons/icon_add.png" bindtap="addCount"></image>
                     </view>
                 </view>
                 <image class="img-close" src="/assets/images/img_close.png" bindtap="closePop"></image>

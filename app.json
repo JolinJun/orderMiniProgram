@@ -6,7 +6,8 @@
     "pages/my/help/help",
     "pages/my/notice/notice",
     "pages/my/feedback/feedback",
-    "pages/order/orderList/orderList"
+    "pages/order/orderList/orderList",
+    "pages/order/sureOrder/sureOrder"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -27,7 +28,7 @@
         "selectedIconPath": "/assets/icons/tab_home_select.png"
       },
       {
-        "pagePath": "pages/order/orderList/orderList",  
+        "pagePath": "pages/order/orderList/orderList",
         "text": "订单",
         "iconPath": "/assets/icons/tab_order.png",
         "selectedIconPath": "/assets/icons/tab_order_select.png"

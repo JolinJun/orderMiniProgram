@@ -5,15 +5,15 @@
 }
 
 .swiper {
+    flex-shrink: 0;
     padding: 0 30rpx;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .wrap {
     width: 100%;
-    position: fixed;
-    left: 0;
-    top: 120px;
+    flex: 1;
 }
 
 .tui-fixed-left {
@@ -21,15 +21,6 @@
     width: 166rpx;
     height: 100%;
     background-color: #f5f5f5;
-    /* position: fixed; */
-    /* top: 120px; */
-    /* left: 0; */
-}
-
-.tui-list-head {
-    height: 65rpx;
-    line-height: 65rpx;
-    padding-left: 20rpx;
 }
 
 .menu-scroll {
@@ -72,9 +63,6 @@
     flex: 1;
     box-sizing: border-box;
     height: 100%;
-    /* position: fixed; */
-    /* top: 120px; */
-    /* right: 0; */
 }
 
 .tui-city-scroll-y {
@@ -179,14 +167,13 @@
 }
 
 .footer {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
     height: 50px;
     width: 100%;
     padding: 0 10rpx;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
     background: white;
     box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1);
     justify-content: flex-end;
@@ -339,7 +326,8 @@
 .pop-footer .right .num {
     color: #333;
     font-size: 28rpx;
-    margin: 0 16rpx
+    width: 46rpx;
+    text-align: center;
 }
 
 .pop .img-close {

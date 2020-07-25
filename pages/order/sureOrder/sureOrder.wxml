@@ -1,0 +1,72 @@
+<view class="main full full-bg flex-column">
+    <view class="content">
+        <view class="box">
+            <view class='goods-box'>
+                <view class="good-box-wrap flex">
+                    <image class="goods-img" src=''></image>
+                    <view class="info-box">
+                        <view class='goods-name ellipsis'>一杯奶茶</view>
+                        <text class="tip">店家提醒您多加冰口味更好</text>
+                        <view class="good-text">月售520 好评度99%</view>
+                        <view class="fun-box flex-justify-between">
+                            <view class="left">
+                                <text class="samll-text">¥</text>
+                                <text class="big-text">25.9</text>
+                            </view>
+                            <text class="good-count">x 1</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class='goods-box'>
+                <view class="good-box-wrap flex">
+                    <image class="goods-img" src=''></image>
+                    <view class="info-box">
+                        <view class='goods-name ellipsis'>一杯奶茶</view>
+                        <text class="tip">店家提醒您多加冰口味更好</text>
+                        <view class="good-text">月售520 好评度99%</view>
+                        <view class="fun-box flex-justify-between">
+                            <view class="left">
+                                <text class="samll-text">¥</text>
+                                <text class="big-text">25.9</text>
+                            </view>
+                            <text class="good-count">x 1</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="row flex-justify-between">
+                <view class="label">商品金额</view>
+                <view class="text-light">¥56</view>
+            </view>
+            <view class="row flex-justify-between">
+                <view class="label">优惠券</view>
+                <view class="text-light">- ¥56</view>
+            </view>
+            <view class="row flex" style="justify-content: flex-end;padding-bottom:26rpx">
+                <view class="text">共2件商品</view>
+                <view class="text" style="margin-left:10rpx;margin-right:8rpx">小计:</view>
+                <view class="price">¥46.8</view>
+            </view>
+        </view>
+        <view class="box pd">
+            <view class="flex block">
+                <view class="label">桌号：</view>
+                <view class="text">007</view>
+            </view>
+            <view class="flex block">
+                <view class="label">单号：</view>
+                <view class="text">007</view>
+            </view>
+            <view class="flex block">
+                <view class="label">时间：</view>
+                <view class="text">2017-09-29 14:00</view>
+            </view>
+        </view>
+    </view>
+    <view class="footer flex-align-center">
+        <view class="text">总计:</view>
+        <view class="price">¥0.0</view>
+        <view class="btn flex-all-center">提交订单</view>
+    </view>
+</view>

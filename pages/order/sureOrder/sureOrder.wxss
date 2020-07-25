@@ -1,0 +1,175 @@
+/* pages/order/sureOrder/sureOrder.wxss */
+
+.content {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.content .box {
+    padding: 0 20rpx;
+    background: white;
+    border-radius: 12rpx;
+    margin-bottom: 20rpx;
+}
+
+.content .pd {
+    padding: 24rpx 20rpx;
+}
+
+.row {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.row .text {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.price {
+    color: #EB524B;
+    font-weight: bold;
+    font-size: 32rpx;
+}
+
+.block {
+    margin-bottom: 8rpx;
+}
+
+.block .label {
+    width: 84rpx;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.block .text {
+    flex: 1;
+    color: #999;
+    font-size: 28rpx;
+}
+
+.footer {
+    flex-shrink: 0;
+    height: 50px;
+    width: 100%;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    background: white;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+}
+
+.footer .text {
+    color: 32rpx;
+    font-weight: bold;
+    color: #333;
+    margin-right: 8rpx;
+}
+
+.footer .btn {
+    width: 240rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    opacity: 1;
+    color: white;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-left: 18rpx;
+}
+
+.goods-box {
+    width: 100%;
+    margin-top: -20rpx;
+    box-sizing: border-box;
+}
+
+.good-box-wrap {
+    width: 100%;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.goods-img {
+    display: block;
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+    border-radius: 10rpx;
+    flex-shrink: 0;
+    background: pink;
+}
+
+.goods-name {
+    color: #333;
+    font-weight: bold;
+    font-size: 28rpx;
+    width: 65%;
+    margin-bottom: 10rpx;
+}
+
+.info-box {
+    flex: 1;
+    position: relative;
+}
+
+.info-box .tip {
+    height: 32rpx;
+    line-height: 32rpx;
+    background: rgba(255, 171, 81, .15);
+    color: #FFAB51;
+    font-size: 20rpx;
+    margin-bottom: 10rpx;
+    display: inline-block;
+    padding: 0 10rpx;
+}
+
+.info-box .good-text {
+    color: #999;
+    font-size: 20rpx;
+}
+
+.info-box .fun-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-box .fun-box .left {
+    color: #EB524B;
+    font-weight: bold;
+}
+
+.info-box .fun-box .left .samll-text {
+    font-size: 20rpx;
+}
+
+.info-box .fun-box .left .big-text {
+    font-size: 32rpx;
+}
+
+.info-box .fun-box .btn {
+    width: 104rpx;
+    height: 42rpx;
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    border-radius: 12rpx;
+    color: white;
+    font-size: 24rpx;
+}
+
+.info-box .good-count {
+    color: #999;
+    font-size: 24rpx;
+}
+
+.label {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.text-light {
+    font-size: 28rpx;
+    color: #EB524B;
+    font-weight: bold;
+}
