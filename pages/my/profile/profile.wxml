@@ -50,7 +50,7 @@
                 </view>
                 <view class="iconfont iconicn-arrow-whitex"></view>
             </view>
-            <view class="block flex-align-center">
+            <view class="block flex-align-center" bindtap="goFeedBack">
                 <image class="image" src="/assets/images/img_comment.png"></image>
                 <view class="wrap flex-align-center">
                     <view class="text">意见反馈</view>

@@ -54,5 +54,10 @@ Page({
         wx.navigateTo({
             url: '/pages/my/notice/notice',
         })
+    },
+    goFeedBack() {
+        wx.navigateTo({
+            url: '/pages/my/feedback/feedback',
+        })
     }
 })

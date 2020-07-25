@@ -1,0 +1,60 @@
+.main {
+    overflow: hidden;
+}
+
+.box {
+    margin-top: 20rpx;
+    background: white;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.text-area-box {
+    margin-top: 20rpx;
+    min-height: 200rpx;
+}
+
+.text-area {
+    width: 710rpx;
+    line-height: 40rpx;
+}
+
+.text {
+    color: #333;
+    font-size: 24rpx;
+}
+
+.tip {
+    color: #999;
+    font-size: 24rpx;
+}
+
+.upload {
+    width: 160rpx;
+    height: 160rpx;
+    border: 1rpx dashed #cccccc;
+}
+
+.upload .img {
+    width: 60rpx;
+    height: 50rpx;
+    margin-bottom: 4rpx;
+}
+
+.row {
+    line-height: 40rpx;
+}
+
+.input {
+    padding-left: 40rpx;
+    flex: 1;
+}
+
+.btn {
+    height: 90rpx;
+    margin: 0 30rpx;
+    background: linear-gradient(270deg, rgba(234, 81, 74, 1) 0%, rgba(234, 89, 59, 1) 100%);
+    border-radius: 12rpx;
+    color: white;
+    font-size: 32rpx;
+}

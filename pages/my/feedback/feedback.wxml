@@ -1,0 +1,26 @@
+<!--pages/my/feedback/feedback.wxml-->
+<view class="main full full-bg">
+    <view class="box">
+        <view class="flex-row-between-center">
+            <view class="text">意见反馈</view>
+            <view class="tip">{{count}}/200</view>
+        </view>
+        <view class="text-area-box full">
+            <textarea class="text text-area" placeholder="请详述您的问题，以便我们为您提供更好的帮助" placeholder-style="color:#999999;" bindinput="bindKeyTextArea"  maxlength="200" value="{{textarea}}"></textarea>
+        </view>
+        <view class="upload flex-all-center flex-column" wx:if="{{tempFilePaths}}">
+            <image class="full" src="{{tempFilePaths}}"></image>
+        </view>
+        <view class="upload flex-all-center flex-column" bindtap="uploadImg" wx:else>
+            <image class="img" src="/assets/images/img_carame.png"></image>
+            <text class="tip">上传图片</text>
+        </view>
+    </view>
+    <view class="box">
+        <view class="row flex-align-center">
+            <view class="text">联系电话</view>
+            <input class="tip input" type="number" maxlength="12" placeholder="请输入手机号" placeholder-style="color:#999999;" bindinput="bindKeyInput" value="{{phone}}"/>
+        </view>
+    </view>
+    <view class="btn flex-all-center" bindtap="commit">提交</view>
+</view>

@@ -1,50 +1,52 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/order/order",
-        "pages/menu/menu",
-        "pages/my/profile/profile",
-        "pages/my/help/help",
-        "pages/my/notice/notice"
-    ],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "自动点餐",
-        "navigationBarBackgroundColor": "#fff",
-        "backgroundColor": "#F8F8F8",
-        "disableSwipeBack": true
-    },
-    "tabBar": {
-        "color": "#9B9B9B",
-        "selectedColor": "#FD5E02",
-        "backgroundColor": "#ffffff",
-        "list": [{
-                "pagePath": "pages/home/home",
-                "text": "首页",
-                "iconPath": "/assets/icons/tab_home.png",
-                "selectedIconPath": "/assets/icons/tab_home_select.png"
-            },
-            {
-                "pagePath": "pages/order/order",
-                "text": "订单",
-                "iconPath": "/assets/icons/tab_order.png",
-                "selectedIconPath": "/assets/icons/tab_order_select.png"
-            },
-            {
-                "pagePath": "pages/my/profile/profile",
-                "text": "我的",
-                "iconPath": "/assets/icons/tab_my.png",
-                "selectedIconPath": "/assets/icons/tab_my_select.png"
-            }
-        ]
-    },
-    "networkTimeout": {
-        "request": 25000,
-        "connectSocket": 25000,
-        "uploadFile": 25000,
-        "downloadFile": 25000
-    },
-    "debug": false,
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/home/home",
+    "pages/menu/menu",
+    "pages/my/profile/profile",
+    "pages/my/help/help",
+    "pages/my/notice/notice",
+    "pages/my/feedback/feedback",
+    "pages/order/orderList/orderList"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "自动点餐",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#F8F8F8",
+    "disableSwipeBack": true
+  },
+  "tabBar": {
+    "color": "#9B9B9B",
+    "selectedColor": "#FD5E02",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/icons/tab_home.png",
+        "selectedIconPath": "/assets/icons/tab_home_select.png"
+      },
+      {
+        "pagePath": "pages/order/orderList/orderList",  
+        "text": "订单",
+        "iconPath": "/assets/icons/tab_order.png",
+        "selectedIconPath": "/assets/icons/tab_order_select.png"
+      },
+      {
+        "pagePath": "pages/my/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/icons/tab_my.png",
+        "selectedIconPath": "/assets/icons/tab_my_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 25000,
+    "connectSocket": 25000,
+    "uploadFile": 25000,
+    "downloadFile": 25000
+  },
+  "debug": false,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }

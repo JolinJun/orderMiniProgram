@@ -223,8 +223,8 @@ Page({
         // 获取商品数组的位置信息
         wx.createSelectorQuery().selectAll('.pro-item').boundingClientRect(function(rects) {
             rects.forEach(function(rect) {
-                // console.log(rect)
-                // 这里减去44是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
+                console.log(rect.top)
+                    // 这里减去44是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
                 proListToTop.push(rect.top - 120)
             })
         }).exec()
