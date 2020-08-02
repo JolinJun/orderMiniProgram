@@ -38,6 +38,7 @@
     font-size: 24rpx;
     color: #EB524B;
     background: white;
+    padding: 0;
 }
 
 .activity-box .image {

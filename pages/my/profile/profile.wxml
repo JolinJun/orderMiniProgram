@@ -1,32 +1,22 @@
-<!-- index.wxml -->
-<!-- <view class="container">
-    <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
-            获取头像昵称
-        </button>
-        <block wx:else>
-            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
-    </view>
-    <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
-    </view>
-</view> -->
-
 <view class="profile-mian">
     <view class="profile-box">
         <view class="flex-align-center">
             <view class="userinfo-avatar">
-                <image class="img" src="{{userInfo.avatarUrl}}"></image>
+                <image class="img" src="{{userInfo.avatarUrl}}" lazy-load="true" wx:if="{{userInfo.avatarUrl}}"></image>
+                <image class="img" src="/assets/images/img_default.png" mode="aspectFit" lazy-load="true" wx:else></image>
             </view>
             <view class="info-box">
-                <view class="userinfo-nickname">{{userInfo.nickName}}</view>
-                <view class="btn flex-all-center">点击登陆</view>
+                <button class="btn flex-all-center" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                    点击登陆
+                </button>
+                <view class="userinfo-nickname" wx:else>{{userInfo.nickName}}</view>
+                <button class="btn flex-all-center" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+                    完善信息
+                </button>
             </view>
         </view>
         <view class="activity-box flex-align-center">
-            <image class="image" src="" mode="aspectFit" lazy-load="true" binderror="" bindload=""></image>
+            <image class="image" src="" mode="aspectFit" lazy-load="true"></image>
             <view class="number flex-align-center">
                 <text class="big-text">0</text>
                 <text class="small-text">元</text>
@@ -38,8 +28,8 @@
         <view class="block flex-align-center">
             <image class="image" src="/assets/images/img_wallet.png"></image>
             <view class="wrap flex-align-center" style="border-bottom: none">
-                    <view class="text">我的钱包</view>
-                </view>
+                <view class="text">我的钱包</view>
+            </view>
             <view class="iconfont iconicn-arrow-whitex"></view>
         </view>
         <view class="block-group">
