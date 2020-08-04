@@ -227,13 +227,11 @@ Page({
         this.setMenuAnimation(Number(e.target.id))
     },
     scroll(e) {
-        console.log('scrollTop', e.detail.scrollTop)
         for (let i = 0; i < this.proListToTop.length; i++) {
             if (e.detail.scrollTop < this.proListToTop[i] && i !== 0 && e.detail.scrollTop > this.proListToTop[i - 1]) {
                 return this.setDis(i)
             }
         }
-        console.log('MENU')
             // 找不到匹配项，默认显示第一个数据
         if (!this.MENU) {
             this.setData({
@@ -243,7 +241,6 @@ Page({
         this.MENU = 0
     },
     setDis(i) {
-        console.log('setDis', i)
             // 设置左侧menu栏的选中状态
         if (i !== this.data.currentActiveIndex + 1 && !this.MENU) {
             this.setData({
@@ -284,7 +281,6 @@ Page({
         // 获取商品数组的位置信息
         wx.createSelectorQuery().selectAll('.pro-item').boundingClientRect(rects => {
                 rects.forEach(rect => {
-                    console.log(rect)
                         // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
                     this.proListToTop.push(rect.top - 120)
                 })
@@ -292,11 +288,9 @@ Page({
             // 添加最后一个高度
         wx.createSelectorQuery().selectAll('.last').boundingClientRect(rects => {
             rects.forEach(rect => {
-                console.log(rect)
                     // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
                 this.proListToTop.push(rect.top + rect.height)
             })
-            console.log(this.proListToTop)
         }).exec()
 
         // 获取menu数组的位置信息
