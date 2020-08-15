@@ -13,6 +13,7 @@ const env = envConf[projectConf.ENV];
 // 请求域名
 const apiRoot = env.apiRoot;
 const version = '1.0'
+const base = ''
 export {
     apiRoot,
     version,

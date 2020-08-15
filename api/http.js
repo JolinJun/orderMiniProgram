@@ -17,7 +17,7 @@ import { apiRoot, version } from '../config/config';
  * @prop   {Object} options.header      请求头设置，选填，默认为application/x-www-form-urlencoded
  * @return {}
  */
-export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f => f, fail, lose, failCustom = false, loseCustom = false, hideLoading = false, ...options }) => {
+export const wxRequest = ({ url, isPromise = true, resolve, reject, success = f => f, fail, lose, failCustom = false, loseCustom = false, hideLoading = false, ...options }) => {
     const app = getApp()
     if (!hideLoading) {
         wx.showLoading({
@@ -31,8 +31,9 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
         "Jwt-Token": app && app.globalData.jwtToken,
         "version": version
     }
+    url = `${apiRoot}${url}`
     wx.request({
-        url: `${apiRoot}${url}`,
+        url,
         method: 'GET',
         dataType: 'json',
         header: header,
@@ -58,12 +59,12 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
                     })
                 } else {
                     // 不支持promise且接口报错
-                    if(!isPromise && fail && typeof fail === 'function') {
+                    if (!isPromise && fail && typeof fail === 'function') {
                         fail(res.data);
                         return
                     }
                     // 支持promise且接口报错自定义处理
-                    if(isPromise && failCustom) {
+                    if (isPromise && failCustom) {
                         let err = {}
                         err.type = 'fail'
                         err.data = res
@@ -79,29 +80,29 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
                         confirmColor: "#FD5E02"
                     });
                 }
-            } else if (res.statusCode === 401 ) {
+            } else if (res.statusCode === 401) {
                 // 登陆过期
                 wx.showModal({
                     title: '',
                     content: '登陆已过期，请刷新重试',
                     confirmText: '确定',
                     confirmColor: "#FD5E02",
-                    success: function (res) {
+                    success: function(res) {
                         if (res.confirm) {
                             wx.reLaunch({
                                 url: "/pages/index/index"
                             })
                         }
-                    }    
+                    }
                 })
             } else {
                 // 不支持promise且接口报错
-                if(!isPromise && lose && typeof lose === 'function') {
+                if (!isPromise && lose && typeof lose === 'function') {
                     lose(res);
                     return
                 }
                 // 支持promise且接口报错自定义处理
-                if(isPromise && loseCustom) {
+                if (isPromise && loseCustom) {
                     let err = new Error();
                     err.type = 'lose'
                     err.data = res
@@ -117,7 +118,7 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
                     cancelColor: '#9B9B9B',
                     success: (res) => {
                         if (res.confirm) {
-                            wxRequest({url, isPromise, resolve, reject, success, fail, lose, failCustom, loseCustom, hideLoading, ...options })
+                            wxRequest({ url, isPromise, resolve, reject, success, fail, lose, failCustom, loseCustom, hideLoading, ...options })
                         }
                     }
                 });
@@ -126,14 +127,14 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
         fail: error => {
             // 调用组件提示请求失败
             wx.hideLoading();
-            
+
             // 不支持promise且接口调用失败
-            if(!isPromise && lose && typeof lose === 'function') {
+            if (!isPromise && lose && typeof lose === 'function') {
                 lose(error);
                 return
             }
             // 支持promise且接口调用失败自定义处理
-            if(isPromise && loseCustom) {
+            if (isPromise && loseCustom) {
                 let err = new Error();
                 err.type = 'lose'
                 err.data = error
@@ -149,22 +150,18 @@ export const wxRequest = ({ url, isPromise = false, resolve, reject, success = f
                 cancelColor: '#9B9B9B',
                 success: (res) => {
                     if (res.confirm) {
-                        wxRequest({url, isPromise, resolve, reject, success, fail, lose, failCustom, loseCustom, hideLoading, ...options })
+                        wxRequest({ url, isPromise, resolve, reject, success, fail, lose, failCustom, loseCustom, hideLoading, ...options })
                     }
                 }
             });
-            
+
         },
         ...options,
-     })
+    })
 }
 
-export const httpRequest = ({ url, isPromise = false, success = f => f, fail, lose, failCustom = false, loseCustom = false, hideLoading = false, ...options }) => {
-    if(!isPromise) {
-        wxRequest({ url, success, fail, lose, isPromise, hideLoading , ...options })
-        return
-    }   
+export const httpRequest = ({ url, isPromise = true, success = f => f, fail, lose, failCustom = false, loseCustom = false, hideLoading = false, ...options }) => {
     return new Promise((resolve, reject) => {
-        wxRequest({ url, success, fail, resolve, reject, lose, failCustom, loseCustom, isPromise, hideLoading , ...options })
+        wxRequest({ url, success, fail, resolve, reject, lose, failCustom, loseCustom, isPromise, hideLoading, ...options })
     })
 }
