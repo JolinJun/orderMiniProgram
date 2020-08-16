@@ -10,7 +10,7 @@
 
 const ENV_CONFIG = {
     LOCAL: {
-        apiRoot: 'https://tcb-api.tencentcloudapi.com', // 测试环境接口
+        apiRoot: 'http://47.92.90.102:8080', // 测试环境接口
         share: {
             // 分享配置
         },

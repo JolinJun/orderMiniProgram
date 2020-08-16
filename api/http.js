@@ -45,14 +45,14 @@ export const wxRequest = ({ url, isPromise = true, resolve, reject, success = f 
             // 这里会先对微信服务返回数据做处理，通过statusCode做分支处理
             if (res.statusCode === 200) {
                 // 这里才对业务服务返回数据处理
-                const { code } = res.data;
-                if (code === 200) {
+                const { retCode } = res.data;
+                if (retCode === 200) {
                     // 更新jwtToken
                     if (res.header['jwt-token'] || res.header['Jwt-Token'] || res.header["JWT-TOKEN"]) {
                         app.globalData.jwtToken = res.header['jwt-token'] || res.header['Jwt-Token'] || res.header["JWT-TOKEN"];
                     }
                     isPromise ? resolve(res) : success(res);
-                } else if (code === 1002) {
+                } else if (retCode === 1002) {
                     // 用户退出登录，回到首页
                     wx.reLaunch({
                         url: "/pages/index/index"

@@ -14,18 +14,7 @@ Component({
         },
         swiperList: {
             type: Array,
-            value: [{
-                    src: '',
-                    background: 'pink'
-                },
-                {
-                    src: '',
-                    background: 'blue'
-                }, {
-                    src: '',
-                    background: 'yellow'
-                }
-            ]
+            value: []
         }
     },
     pageLifetimes: {

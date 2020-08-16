@@ -1,7 +1,8 @@
 import Service from './../../service/service'
 Page({
     data: {
-
+        swiperImgList: [], // 轮播图片
+        storeInfo: {} // 门店信息
     },
     onLoad() {
         this.getStoreInfo()
@@ -14,14 +15,28 @@ Page({
             data: params,
             isPromise: true
         }).then(res => {
-            console.log(res)
+            let { data } = res.data, { carouselList, closeTime, id, openTime, storeAddress, storeHotline, storeIntroduction, storeName, storeLog } = data
+            let storeInfo = {
+                id,
+                closeTime,
+                openTime,
+                storeAddress,
+                storeHotline,
+                storeIntroduction,
+                storeName,
+                storeLog
+            }
+            this.setData({
+                swiperImgList: carouselList,
+                storeInfo
+            })
         }).catch(err => {
             console.log(err)
         })
     },
     goMenu() {
         wx.navigateTo({
-            url: '/pages/menu/menu',
+            url: `/pages/menu/menu?storeId=${this.data.storeInfo.id}`,
         })
     },
     clickBox() {

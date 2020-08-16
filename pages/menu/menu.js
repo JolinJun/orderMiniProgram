@@ -1,11 +1,13 @@
 var app = getApp();
+import Service from './../../service/service'
+
 Page({
 
     data: {
         currentActiveIndex: 0,
         popCount: 0,
         // 接口返回的商品数组
-        navList: [{
+        menuList: [{
                 c_id: "01",
                 c_name: '电脑办公',
                 list: [{
@@ -196,14 +198,13 @@ Page({
         this.MENU = 0
         this.windowHeight = 0
         this.timeoutId = null
+        this.storeId = -1
     },
-    onLoad: function(e) {
+    onLoad(options) {
         this.initData()
-            // 确保页面数据已经刷新完毕~
-        setTimeout(() => {
-            this.getAllRects()
-        }, 20)
         this.getHeight()
+        this.storeId = options.storeId
+        this.getMenuInfo()
     },
     getHeight() {
         wx.getSystemInfo({
@@ -215,7 +216,23 @@ Page({
             }
         })
     },
-
+    getMenuInfo() {
+        let data = {
+            storeId: this.storeId
+        }
+        Service.getMenuInfoReq({
+            data
+        }).then(res => {
+            let { data } = res.data
+            this.setData({
+                menuList: data
+            }, () => {
+                this.getAllRects()
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+    },
     changeMenu(e) {
         // 改变左侧tab栏操作
         if (Number(e.target.id) === this.data.currentActiveIndex) return
@@ -232,7 +249,7 @@ Page({
                 return this.setDis(i)
             }
         }
-            // 找不到匹配项，默认显示第一个数据
+        // 找不到匹配项，默认显示第一个数据
         if (!this.MENU) {
             this.setData({
                 currentActiveIndex: 0
@@ -241,7 +258,7 @@ Page({
         this.MENU = 0
     },
     setDis(i) {
-            // 设置左侧menu栏的选中状态
+        // 设置左侧menu栏的选中状态
         if (i !== this.data.currentActiveIndex + 1 && !this.MENU) {
             this.setData({
                 currentActiveIndex: i - 1
@@ -263,7 +280,7 @@ Page({
                     self.setData({
                         leftMenuTop: (this.menuToTop[i].top - this.windowHeight)
                     })
-                }, 50)
+                }, 100)
             } else {
                 if (this.data.leftMenuTop === 0) return
                 this.setData({
@@ -272,23 +289,19 @@ Page({
             }
         }
     },
-    getActiveReacts() {
-        wx.createSelectorQuery().selectAll('.menu-active').boundingClientRect(function(rects) {
-            return rects[0].top
-        }).exec()
-    },
     getAllRects() {
         // 获取商品数组的位置信息
         wx.createSelectorQuery().selectAll('.pro-item').boundingClientRect(rects => {
-                rects.forEach(rect => {
-                        // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
-                    this.proListToTop.push(rect.top - 120)
-                })
-            }).exec()
-            // 添加最后一个高度
+            rects.forEach(rect => {
+                // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
+                this.proListToTop.push(rect.top - 120)
+            })
+        }).exec()
+
+        // 添加最后一个高度
         wx.createSelectorQuery().selectAll('.last').boundingClientRect(rects => {
             rects.forEach(rect => {
-                    // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
+                // 这里减去是根据你的滚动区域距离头部的高度，如果没有高度，可以将其删去
                 this.proListToTop.push(rect.top + rect.height)
             })
         }).exec()
@@ -308,15 +321,6 @@ Page({
             })
         }).exec()
     },
-    // 获取系统的高度信息
-    // getSystemInfo() {
-    //     let self = this
-    //     wx.getSystemInfo({
-    //         success: function(res) {
-    //             windowHeight = res.windowHeight / 2
-    //         }
-    //     })
-    // },
     // 打开选择规格
     openPop() {
         this.setData({

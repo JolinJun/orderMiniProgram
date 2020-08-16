@@ -7,8 +7,8 @@
         <!-- 左侧导航 -->
         <view class='tui-fixed-left'>
             <scroll-view class='menu-scroll' scroll-x="true" scroll-y="true" style='height:{{height}}' scroll-with-animation="true" scroll-top="{{leftMenuTop}}">
-                <view class="menu-item {{index === currentActiveIndex ? 'menu-active' : ''}}" wx:for="{{navList}}" wx:key="unique" data-index="{{index}}" id='{{index}}' catchtap='changeMenu'>
-                    {{item.c_name}}
+                <view class="menu-item {{index === currentActiveIndex ? 'menu-active' : ''}}" wx:for="{{menuList}}" wx:key="unique" data-index="{{index}}" id='{{index}}' catchtap='changeMenu'>
+                    {{item.dishesCategory}}
                     <view class="num">3</view>
                 </view>
             </scroll-view>
@@ -16,20 +16,21 @@
         <!-- 右侧滚动商品 -->
         <view class='content'>
             <scroll-view class='tui-city-scroll-y' scroll-y="true" style='height:{{height}}' scroll-with-animation="true" scroll-top="{{rightProTop}}" bindscroll="scroll">
-                <view class='pro-item {{index === navList.length -1 ? "last" : ""}}' wx:for="{{navList}}" wx:key="unique">
-                    <view class='tui-list-head' id='NAV{{index}}'>{{item.c_name}}</view>
+                <view class='pro-item {{index === menuList.length -1 ? "last" : ""}}' wx:for="{{menuList}}" wx:key="unique">
+                    <view class='tui-list-head' id='NAV{{index}}'>{{item.dishesCategory}}</view>
                     <view class='tui-list-li'>
-                        <view class='goods-box' wx:for-item='items' wx:for="{{item.list}}" wx:key="unique">
+                        <view class='goods-box' wx:for-item='items' wx:for="{{item.storeMenuVOList}}" wx:key="unique">
                             <view class="good-box-wrap flex">
-                                <image class="goods-img" src='{{items.url}}'></image>
+                                <image class="goods-img" src='{{items.dishesImg}}'></image>
                                 <view class="info-box">
-                                    <view class='goods-name ellipsis'>{{items.goodsName}}</view>
+                                    <view class='goods-name ellipsis'>{{items.dishesName}}</view>
                                     <text class="tip">店家提醒您多加冰口味更好</text>
-                                    <view class="good-text">月售520 好评度99%</view>
+                                    <view class="good-text">月售{{items.monthlySales}} 好评度{{items.praise}}%</view>
                                     <view class="fun-box flex-justify-between">
                                         <view class="left">
                                             <text class="text-samll">¥</text>
-                                            <text class="text-big">25.9</text>
+                                            <text class="text-big">{{items.dishesMoney}}</text>
+                                            <text class="text-samll text-line text-color" style="margin-left: 6rpx">¥{{items.dishesPrice}}</text>
                                         </view>
                                         <view class="btn flex-all-center" bindtap="openPop">
                                             选规格
